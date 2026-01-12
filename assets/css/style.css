@@ -1143,31 +1143,44 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .models-grid {
-                grid-template-columns: 1fr;
-            }
-
             .model-viewer-container {
-                height: 350px;
+                height: 300px;
+            }
+            
+            .model-card {
+                margin: 0 auto;
+                max-width: 100%;
             }
         }
 
         @media (max-width: 480px) {
             .model-viewer-container {
-                height: 300px;
+                height: 250px;
             }
 
             .container {
                 padding: 0 1rem;
+            }
+            
+            .models-grid {
+                gap: 1rem;
+                margin-top: 2rem;
             }
         }
 
         /* Models Grid */
         .models-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .models-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
         }
 
         /* Model Card */
