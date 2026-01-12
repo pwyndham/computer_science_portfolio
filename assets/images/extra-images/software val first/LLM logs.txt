@@ -1,0 +1,257 @@
+/**
+     * Adds a blind BCC recipient to the email. The email address will
+	also be used as the personal name. The name will be encoded by
+	the charset of
+     * {@link #setCharset(String)}. If it is not set, it will be encoded
+	using the Java platform's default charset (UTF-16) if it contains
+	non-ASCII characters;
+     * otherwise, it is used as is.
+     *
+     * @param email A String.
+     * @return An Email.
+     * @throws EmailException Indicates an invalid email address
+     * @since 1.0
+     */
+    public Email addBcc(final String email) throws EmailException {
+        return addBcc(email, null);
+    }
+
+    /**
+     * Adds an array of blind BCC recipients to the email. The email 
+	addresses will also be used as the personal name. The names 
+	will be encoded by the charset
+     * of {@link #setCharset(String)}. If it is not set, it will be 
+	encoded using the Java platform's default charset (UTF-16) 
+	if it contains non-ASCII
+     * characters; otherwise, it is used as is.
+     *
+     * @param emails A String array.
+     * @return An Email.
+     * @throws EmailException Indicates an invalid email address
+     * @since 1.3
+     */
+    public Email addBcc(final String... emails) throws EmailException {
+        EmailException.checkNonEmpty(emails, () -> "BCC list invalid.");
+        for (final String email : emails) {
+            addBcc(email, null);
+        }
+        return this;
+    }
+
+    /**
+     * Adds a blind BCC recipient to the email using the specified address
+	and the specified personal name. The name will be encoded by the 
+	charset of
+     * {@link #setCharset(String)}. If it is not set, it will be encoded 
+	using the Java platform's default charset (UTF-16) if it contains 
+	non-ASCII characters;
+     * otherwise, it is used as is.
+     *
+     * @param email A String.
+     * @param name  A String.
+     * @return An Email.
+     * @throws EmailException Indicates an invalid email address
+     * @since 1.0
+     */
+    public Email addBcc(final String email, final String name) throws 
+	EmailException {
+        return addBcc(email, name, charset);
+    }
+
+    /**
+     * Adds a blind BCC recipient to the email using the specified address,
+	personal name, and charset encoding for the name.
+     *
+     * @param email   A String.
+     * @param name    A String.
+     * @param charset The charset to encode the name with.
+     * @return An Email.
+     * @throws EmailException Indicates an invalid email address
+     * @since 1.1
+     */
+    public Email addBcc(final String email, final String name, final String
+	charset) throws EmailException {
+        bccList.add(createInternetAddress(email, name, charset));
+        return this;
+    }
+
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package org.apache.commons.mail2.javax;
+
+import org.apache.commons.mail2.core.EmailException;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayNameGenerator;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestFactory;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class EmailTest {
+    Email testEmail;
+    @BeforeEach
+    void setUp(){
+        testEmail = new SimpleEmail();
+    }
+    @Test
+    void testSend() throws EmailException {
+//        testEmail.send();
+    }
+    @Test
+    void testAddBcc() throws EmailException {
+        testEmail.addBcc("a@b.com");
+    }
+
+    @Test
+    void testAddHeader() throws EmailException {
+        testEmail.addHeader("name", "value");
+    }
+
+    @Test
+    void testAddReplyTo() throws EmailException {}
+
+    @Test
+    void testBuildMimeMessage() throws EmailException {}
+
+    @Test
+    void testGetMailSession() throws EmailException {}
+
+    @Test
+    void testGetSentDate() throws EmailException {}
+
+    @Test
+    void testUpdateContentType() throws EmailException {}
+
+}
+
+Given the context of my skeleton test cases above, and addBcc test methods
+help me set up tests that on the surface cover what you can see contextually. 
+
+package org.apache.commons.mail2.javax;
+
+import org.apache.commons.mail2.core.EmailException;
+import org.apache.commons.mail2.simple.SimpleEmail;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import javax.mail.Session;
+import java.util.Date;
+import java.util.Properties;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ * Unit tests for org.apache.commons.mail2.javax.Email class.
+ * 
+ * Tests the required 8 methods:
+ *  - addBcc(String)
+ *  - addHeader(String, String)
+ *  - addReplyTo(String, String)
+ *  - buildMimeMessage()
+ *  - send()
+ *  - getMailSession()
+ *  - getSentDate()
+ *  - updateContentType(String)
+ */
+class EmailTest {
+
+    private SimpleEmail testEmail;
+
+    @BeforeEach
+    void setUp() {
+        testEmail = new SimpleEmail();
+    }
+
+    @Test
+    @DisplayName("Test addBcc() with valid email")
+    void testAddBcc() throws EmailException {
+        testEmail.addBcc("a@b.com");
+        assertFalse(testEmail.getBccAddresses().isEmpty(), "BCC list should 
+	not be empty after adding address");
+        assertEquals("a@b.com", testEmail.getBccAddresses().get(0).getAddress());
+    }
+
+    @Test
+    @DisplayName("Test addBcc() with invalid email throws EmailException")
+    void testAddBccInvalidEmail() {
+        assertThrows(EmailException.class, () -> testEmail.addBcc("invalid-email"));
+    }
+
+    @Test
+    @DisplayName("Test addHeader() stores header correctly")
+    void testAddHeader() {
+        testEmail.addHeader("X-Test-Header", "Value123");
+        assertTrue(testEmail.getHeaders().containsKey("X-Test-Header"));
+        assertEquals("Value123", testEmail.getHeaders().get("X-Test-Header"));
+    }
+
+    @Test
+    @DisplayName("Test addReplyTo() adds reply-to address correctly")
+    void testAddReplyTo() throws EmailException {
+        testEmail.addReplyTo("reply@example.com", "Reply User");
+        assertFalse(testEmail.getReplyToAddresses().isEmpty());
+        assertEquals("reply@example.com", testEmail.getReplyToAddresses().get(0).getAddress());
+    }
+
+    @Test
+    @DisplayName("Test buildMimeMessage() runs without error after minimal setup")
+    void testBuildMimeMessage() throws Exception {
+        testEmail.setHostName("localhost");
+        testEmail.setFrom("sender@example.com");
+        testEmail.addTo("receiver@example.com");
+        testEmail.setSubject("Test Subject");
+        testEmail.setMsg("Test message body");
+
+        assertDoesNotThrow(() -> testEmail.buildMimeMessage());
+        assertNotNull(testEmail.getMimeMessage(), "MimeMessage should be built");
+    }
+
+    @Test
+    @DisplayName("Test getMailSession() returns valid Session object")
+    void testGetMailSession() throws EmailException {
+        testEmail.setHostName("smtp.example.com");
+        Session session = testEmail.getMailSession();
+        assertNotNull(session);
+        Properties props = session.getProperties();
+        assertEquals("smtp.example.com", props.getProperty("mail.smtp.host"));
+    }
+
+    @Test
+    @DisplayName("Test getSentDate() defaults and can be updated")
+    void testGetSentDate() {
+        Date sentDate = testEmail.getSentDate();
+        assertNotNull(sentDate, "Sent date should default to non-null");
+    }
+
+    @Test
+    @DisplayName("Test updateContentType() modifies internal content type")
+    void testUpdateContentType() throws EmailException {
+        testEmail.updateContentType("text/html; charset=UTF-8");
+        assertTrue(testEmail.getContentType().contains("text/html"));
+    }
+
+    @Test
+    @DisplayName("Test send() throws expected exception without SMTP setup")
+    void testSend() {
+        assertThrows(EmailException.class, testEmail::send);
+    }
+}
+
+
+This is just one example, from here i would fine tune the prompts to be hyper 
+specific on the info in the actual class instead of the test.

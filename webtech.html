@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<div class="header-content">
+<title>Patrick's Website - Web Tech Page</title>
+</div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/fav.png" type="image/png">
+
+<!-- Bootstrap -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!-- code note test -->
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Wyndham - Computer Science Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  
+<div class="container">
+  <span class="floating-btn close"><a href="/static_html_output/index.html" class="view-details-btn">Home</a></span>
+  <span class="floating-btn top"><a href="#page-top" class="view-details-btn">Top</a></span>
+
+
+    <!-- Title Section -->
+
+<br>
+                <div class="modal-header">
+                <h2 class="modal-title">Web Technologies</h2>
+                <p class="modal-subtitle">Web development project integrating backend and frontend development for my Web Technologies class at UTSA.</p>
+                <div class="modal-tags">
+                  <span class="modal-tag">AWS - Free Tier Server</span>
+                    <span class="modal-tag">AWS - EC2 Instance</span>
+                    <span class="modal-tag">PHP</span>
+                    <span class="modal-tag">HTML, CSS, JS</span>
+                    <span class="modal-tag">MySQL</span>
+                    <span class="modal-tag">PHPMyAdmin</span>
+                    <span class="modal-tag">Ubuntu Linux</span>
+                    <span class="modal-tag">Adobe Dreamweaver</span>
+                    <span class="project-link"><p>Github Link: <a href="https://github.com/pwyndham/Web-Technologies-Website" target="_blank"><u>https://github.com/pwyndham/Web-Technologies-Website</u></a></p></span>
+                </div>
+                </div>
+
+
+   <!-- Project Overview -->
+
+            <div class="project-details">
+                <h3 class="details-title">Project Overview</h3>
+                <p class="details-text">For my Web Technologies class, over the course of the semester I used AWS Free tier server and created an EC2 instance. I used the Ubuntu Linux distro, and accessed it
+            via Command line, where I would ssh to the pem file provided by AWS. I installed PHP and MySQL on the server and used PHPMyAdmin to manage the database. I created a website using Adobe Dreamweaver that connected to the database and allowed users to input their contact information
+            which would then be stored in the database. I created different user accounts with different privileges to see how that would affect what users could do on the website and database.
+            The rest of the project was just creating an outline for a personal portfolio. I was given the creative freedom to design the website however I wanted as long as it didn't crash at any given time.
+				</p>
+
+            </div>
+
+            <!-- Screenshot Gallery -->
+  <div class="screenshot-gallery">
+  <h3 class="gallery-title">Screenshots</h3>
+                <div class="gallery-grid">
+    <div class="screenshot-item" onclick="openLightbox(this)">
+      <div class="screenshot-image"><img src="assets/images/extra-images/Web tech homepage screenshot.jpg" alt="Web Tech Homepage"></div>
+      <div class="screenshot-caption">Web Tech Homepage</div>
+    </div>
+
+    <div class="screenshot-item" onclick="openLightbox(this)">
+        <div class="screenshot-image"><img src="assets/images/extra-images/Web tech contact screenshot.jpg" alt="Web Tech Contact Page"></div>
+        <div class="screenshot-caption">Web Tech Contact Page</div>
+    </div>
+
+    <div class="screenshot-item" onclick="openLightbox(this)">
+        <div class="screenshot-image"><img src="assets/images/extra-images/user input info screenshot.jpg" alt="Web Tech User Input Page"></div>
+        <div class="screenshot-caption">Web Tech User Input Page</div>
+    </div>
+
+    <div class="screenshot-item" onclick="openLightbox(this)">
+        <div class="screenshot-image"><img src="assets/images/extra-images/contact data schema with contact info table screenshot.jpg" alt="Web Tech Contact Data Schema"></div>
+        <div class="screenshot-caption">Web Tech Contact Data Schema</div>
+    </div>
+
+    <div class="screenshot-item" onclick="openLightbox(this)">
+        <div class="screenshot-image"><img src="assets/images/extra-images/Web Tech user accounts screenshot.jpg" alt="Web Tech User Accounts"></div>
+        <div class="screenshot-caption">Web Tech User Accounts</div>
+    </div>
+
+    <div class="screenshot-item" onclick="openLightbox(this)">
+        <div class="screenshot-image"><img src="assets/images/extra-images/web user db priveleges screenshot.jpg" alt="Web Tech User Privileges"></div>
+        <div class="screenshot-caption">Web Tech User Privileges</div>
+    </div>
+    </div>
+  </div>
+
+
+    
+
+
+
+
+	
+
+<!-- Key Features -->
+            <div class="project-details">
+                <h3 class="details-title">Key Features</h3>
+                <ul class="details-list">
+                    <li>Dynamic contact form with database integration for storing user information</li>
+                    <li>MySQL database connectivity using PHP for data persistence</li>
+                    <li>Multiple user accounts with role-based access control and varying privilege levels</li>
+                    <li>PHPMyAdmin interface for database administration and user management</li>
+                    <li>Custom-designed personal portfolio layout with creative freedom</li>
+                    <li>Server stability monitoring to prevent crashes</li>
+                    <li>Responsive web design using HTML, CSS, and JavaScript</li>
+                    <li>Secure database credential management and connection handling</li>
+                </ul>
+            </div>
+
+            <!-- Technical Implementation -->
+            <div class="feature-box">
+                <div class="feature-box-title">🏗️ Technical Architecture</div>
+                <div class="feature-box-content">
+                    The website is hosted on AWS EC2 infrastructure running Ubuntu Linux with a LNMP stack 
+                    (Linux, Nginx, MySQL, PHP). Adobe Dreamweaver was used for frontend development, creating 
+                    HTML/CSS/JavaScript pages that connect to a MySQL database via PHP. The architecture 
+                    implements role-based access control through MySQL user accounts with different privilege 
+                    levels, demonstrating security best practices. SSH access enables remote server administration, 
+                    while PHPMyAdmin provides a web-based interface for database management and monitoring.
+                </div>
+            </div>
+
+            <!-- Code Example -->
+             <div class="feature-box">
+                <div class="feature-box-title">🖥️ Code Example</div>
+            <div class="code-demo">
+                <div class="code-header">
+                    <span class="code-filename">register.php</span>
+                    <span class="code-language">PHP / MySQL</span><button class="code-toggle" onclick="toggleCode()">Hide Code</button>
+                </div>
+                <div class="code-body" id="code-body">
+<pre><code class="language-php">&lt;?php
+// User registration with password hashing and duplicate checking
+if(!isset($_POST['submit']))
+{
+    // Display registration form
+    echo '&lt;form method="post" action=""&gt;';
+    echo '&lt;div class="form-group"&gt;';
+    echo '&lt;label for="username"&gt;Username: &lt;/label&gt;';
+    echo '&lt;input type="text" name="username" class="form-control"/&gt;';
+    echo '&lt;/div&gt;';
+    echo '&lt;div class="form-group"&gt;';
+    echo '&lt;label for="password"&gt;Password: &lt;/label&gt;';
+    echo '&lt;input type="text" name="password" class="form-control"/&gt;';
+    echo '&lt;/div&gt;';
+    echo '&lt;button class="btn btn-primary" name="submit"&gt;Submit&lt;/button&gt;';
+    echo '&lt;/form&gt;';
+}
+else
+{
+    // Process registration
+    $username = addslashes($_POST['username']);
+    $dblink = db_connect("contact_data");
+    
+    // Check if username already exists
+    $sql = "SELECT `auto_id` FROM `accounts` WHERE `username`='$username'";
+    $result = $dblink-&gt;query($sql) or
+        die("Something went wrong: " . $dblink-&gt;error);
+    
+    if ($result-&gt;num_rows &gt; 0) {
+        // Username already exists
+        redirect("register.php?errMsg=accountExists");
+    }
+    else {
+        // Create new account with hashed password
+        $password = $_POST['password'];
+        $salt = "CS4413SP25"; // Salt for additional security
+        $pwHash = hash('sha256', $salt.$password.$username);
+        
+        $sql = "INSERT INTO `accounts` (`username`, `hash`) 
+                VALUES ('$username', '$pwHash')";
+        $dblink-&gt;query($sql) or
+            die("Something went wrong: " . $dblink-&gt;error);
+        
+        redirect("static_html_output/login.html");
+    }
+}
+?&gt;</code></pre>
+                </div>
+            </div>
+            </div>
+
+            
+            <!-- Challenges & Solutions -->
+            <div class="feature-box">
+                <div class="feature-box-title">💡 Challenges & Solutions</div>
+                <div class="feature-box-content">
+                     <strong>Challenge:</strong> Ensuring the website remained stable and didn't crash under various usage scenarios while maintaining database connectivity.<br><br>
+                    <strong>Solution:</strong> Implemented proper error handling in PHP scripts, used prepared statements for database queries, 
+                    and established connection pooling best practices. Monitored server resources and tested extensively 
+                    to identify potential failure points before deployment.<br><br>
+                    
+                    <strong>Challenge:</strong> Understanding and implementing MySQL user privilege levels and how they affect database access.<br><br>
+                    <strong>Solution:</strong> Created multiple user accounts in PHPMyAdmin with different privilege sets (SELECT only, 
+                    INSERT/UPDATE, full admin access) and tested each to understand how privilege restrictions impact 
+                    functionality. This hands-on approach helped solidify understanding of database security and access control.
+                </div>
+            </div>
+
+            <div class="project-details">
+                <h3 class="details-title">Learning Outcomes</h3>
+                <ul class="details-list">
+                    <li>Gained practical experience deploying web applications on AWS EC2 cloud infrastructure</li>
+                    <li>Developed proficiency in LNMP stack (Linux, Nginx, MySQL, PHP) configuration and management</li>
+                    <li>Learned database design principles and MySQL schema creation</li>
+                    <li>Understood role-based access control through hands-on implementation of MySQL user privileges</li>
+                    <li>Improved skills in PHP for server-side processing and database connectivity</li>
+                    <li>Practiced secure coding techniques including input sanitization and SQL injection prevention</li>
+                    <li>Enhanced frontend development skills using HTML, CSS, and JavaScript</li>
+                    <li>Gained experience with Adobe Dreamweaver for rapid web development</li>
+                    <li>Learned server administration through SSH and command-line interface</li>
+                    <li>Developed understanding of web application stability and error handling strategies</li>
+                </ul>
+            </div>
+            </div>
+        
+	
+
+    <!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+        <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close">×</button>
+        <img class="lightbox-image" id="lightbox-img" src="" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+    <div class="lightbox-hint">Click anywhere or press ESC to close</div>
+</div>
+
+<script src="assets/js/lightbox-modal.js"></script>
+</body>
+</html>
+
+	
+</body>
+</html>

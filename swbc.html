@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<div class="header-content">
+<title>Patrick's Website - SWBC Page</title>
+</div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/fav.png" type="image/png">
+
+<!-- Bootstrap -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!-- code note test -->
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Wyndham - Computer Science Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  
+<div class="container">
+  <span class="floating-btn close"><a href="/static_html_output/index.html" class="view-details-btn">Home</a></span>
+  <span class="floating-btn top"><a href="#page-top" class="view-details-btn">Top</a></span>
+
+
+    <!-- Title Section -->
+
+<br>
+                <div class="modal-header">
+                <h2 class="modal-title">SWBC Document Management System</h2>
+                <p class="modal-subtitle">Full-stack document management system built for Senior Design Class</p>
+                <div class="modal-tags">
+                  <span class="modal-tag">sqlectron - postreSQL</span>
+                    <span class="modal-tag">AWS - RDS</span>
+                    <span class="modal-tag">AWS - Dynamo DB</span>
+                    <span class="modal-tag">Figma</span>
+                    <span class="modal-tag">Trello</span>
+                    <span class="project-link"><p>Github Link: <a href="https://github.com/Colten-Haggard-dev/SWBCDocumentAPI/" target="_blank"><u>https://github.com/Colten-Haggard-dev/SWBCDocumentAPI</u></a></p></span>
+                </div>
+                </div>
+ 
+
+   <!-- Project Overview -->
+
+            <div class="project-details">
+                <h3 class="details-title">Project Overview</h3>
+                <p class="details-text">For my Senior Design class I chose to work with SWBC and work on a Document Management System with them. Our goal was to use OCR to extract text from sheets and turn
+            them into plain text. I took the role of database admin and was in charge of setting up the server side of the database. I setup both the RDS and noSQL servers for the
+            EC2 Instance. I used sqlectron to see our output just to check if we were getting the right output. We worked with Trello to make sure we were getting our tasks done on time.
+            </p>
+            </div>
+
+<!-- Screenshot Gallery -->
+  <div class="screenshot-gallery">
+  <h3 class="gallery-title">Screenshots</h3>
+                <div class="gallery-grid">
+    <div class="screenshot-item" onclick="openLightbox(this)">
+      <div class="screenshot-image"><img src="assets/images/extra-images/SWBC Screenshot.png" alt="SWBC Screenshot"></div>
+      <div class="screenshot-caption">SWBC Screenshot</div>
+    </div>
+
+    <div class="screenshot-item" onclick="openLightbox(this)">
+        <div class="screenshot-image"><img src="assets/images/extra-images/SWBC diagram.jpg" alt="SWBC Diagram"></div>
+        <div class="screenshot-caption">SWBC Diagram</div>
+    </div>
+
+    <div class="screenshot-item" onclick="openLightbox(this)">
+        <div class="screenshot-image"><img src="assets/images/extra-images/sqlectron screenshot.jpg" alt="sqlectron screenshot"></div>
+        <div class="screenshot-caption">sqlectron screenshot</div>
+    </div>
+
+    <div class="screenshot-item" onclick="openLightbox(this)">
+        <div class="screenshot-image"><img src="assets/images/extra-images/Trello Screenshot.jpg" alt="Trello Screenshot"></div>
+        <div class="screenshot-caption">Trello Screenshot</div>
+    </div>
+    </div>
+  </div>
+
+
+<!-- Key Features -->
+            <div class="project-details">
+                <h3 class="details-title">Key Features</h3>
+                <ul class="details-list">
+                    <li>OCR Textract</li>
+                    <li>AWS EC2 Instance</li>
+                    <li>AWS RDS Server</li>
+                    <li>Local Database Hosting on sqlectron</li>
+                    <li>API connection to OCR and frontend</li>
+                    <li>Docker for applications</li>
+                </ul>
+            </div>
+
+            <!-- Technical Implementation -->
+            <div class="feature-box">
+                <div class="feature-box-title">🏗️ Technical Architecture</div>
+                <div class="feature-box-content">
+                    The application follows a three-tier architecture with a Spring Boot backend, 
+                    MySQL database, and responsive frontend. RESTful APIs handle all client-server 
+                    communication, ensuring scalability and maintainability.
+                </div>
+            </div>
+
+            <!-- Challenges & Solutions -->
+            <div class="feature-box">
+                <div class="feature-box-title">💡 Challenges & Solutions</div>
+                <div class="feature-box-content">
+                    <strong>Challenge:</strong> Getting tasks assigned.<br><br>
+                    <strong>Solution:</strong> Staying in communication with both SWBC and my team to ensure tasks were being completed on time. While working
+                    independently on learning just in case we got assigned tasks on the fly.
+                </div>
+            </div>
+
+            <div class="project-details">
+                <h3 class="details-title">Learning Outcomes</h3>
+                <ul class="details-list">
+                    <li>Gained experience with SWBC with official deadlines and real-life problems</li>
+                    <li>Sprint planning with SWBC</li>
+                    <li>Working with little info and making the most out of what we got</li>
+                    <li>Working solo with Database configuration with AWS</li>
+                </ul>
+            </div>
+        </div>
+	
+
+    <!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+        <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close">×</button>
+        <img class="lightbox-image" id="lightbox-img" src="" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+    <div class="lightbox-hint">Click anywhere or press ESC to close</div>
+</div>
+
+<script src="assets/js/lightbox-modal.js"></script>
+</body>
+</html>
+
+	
+</body>
+</html>

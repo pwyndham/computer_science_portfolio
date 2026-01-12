@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<div class="header-content">
+<title>Patrick's Website - Softwear Page</title>
+</div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/fav.png" type="image/png">
+
+<!-- Bootstrap -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!-- code note test -->
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Wyndham - Computer Science Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  
+<div class="container">
+  <span class="floating-btn close"><a href="/static_html_output/index.html" class="view-details-btn">Home</a></span>
+  <span class="floating-btn top"><a href="#page-top" class="view-details-btn">Top</a></span>
+
+
+    <!-- Softwear Section -->
+
+<br>
+                <div class="modal-header">
+                <h2 class="modal-title">Softwear E-Commerce Platform </h2>
+                <p class="modal-subtitle">Full-stack e-commerce application built for Software Engineering class</p>
+                <div class="modal-tags">
+                  <span class="modal-tag">Java</span>
+                    <span class="modal-tag">Spring Boot</span>
+                    <span class="modal-tag">MySQL Workbench</span>
+                    <span class="modal-tag">Lucid Chart</span>
+                    <span class="modal-tag">VSCode</span>
+                    <span class="modal-tag">Github</span>
+                    <span class="project-link"><p>Github Link: <a href="https://github.com/bichttor/Softwear" target="_blank"><u>https://github.com/bichttor/Softwear</u></a></p></span>
+                </div>
+                </div>
+       
+
+   <!-- Project Overview -->
+
+            <div class="project-details">
+                <h3 class="details-title">Project Overview</h3>
+                <p class="details-text">Softwear was my classmates and my E-Commerce web application from my Software Engineering class at UTSA. I was assigned
+            the database administrator role for this project. I designed the database schema, created the ERD diagram, and implemented the database using MySQL.
+            I also helped out with the back-end developers getting everything connected through Spring Boot.</p>
+            </div>
+
+
+
+<!-- Screenshot Gallery -->
+  <div class="screenshot-gallery">
+  <h3 class="gallery-title">Screenshots</h3>
+                <div class="gallery-grid">
+    <div class="screenshot-item" onclick="openLightbox(this)">
+      <div class="screenshot-image"><img src="assets/images/extra-images/softwear logo.png" alt="Softwear Logo"></div>
+      <div class="screenshot-caption">Softwear Logo</div>
+    </div>
+
+    <div class="screenshot-item" onclick="openLightbox(this)">
+        <div class="screenshot-image"><img src="assets/images/extra-images/Softwear about.png" alt="Softwear About Page"></div>
+        <div class="screenshot-caption">Softwear About Page</div>
+    </div>
+
+    <div class="screenshot-item" onclick="openLightbox(this)">
+        <div class="screenshot-image"><img src="assets/images/extra-images/softwear user page.png" alt="Softwear User Page"></div>
+        <div class="screenshot-caption">Softwear User Page</div>
+    </div>
+
+    <div class="screenshot-item" onclick="openLightbox(this)">
+        <div class="screenshot-image"><img src="assets/images/extra-images/softwear erd.png" alt="Softwear ERD"></div>
+        <div class="screenshot-caption">Softwear ERD</div>
+    </div>
+    </div>
+  </div>
+
+
+<!-- Key Features -->
+            <div class="project-details">
+                <h3 class="details-title">Key Features</h3>
+                <ul class="details-list">
+                    <li>User authentication and authorization with Spring Security</li>
+                    <li>Product catalog with search and filtering capabilities</li>
+                    <li>Shopping cart</li>
+                    <li>Order history and tracking</li>
+                    <li>Admin dashboard for inventory management</li>
+                    <li>MVC architecture</li>
+                </ul>
+            </div>
+
+            <!-- Technical Implementation -->
+            <div class="feature-box">
+                <div class="feature-box-title">🏗️ Technical Architecture</div>
+                <div class="feature-box-content">
+                    The application follows a three-tier architecture with a Spring Boot backend, 
+                    MySQL database, and responsive frontend. RESTful APIs handle all client-server 
+                    communication, ensuring scalability and maintainability.
+                </div>
+            </div>
+
+            <!-- Code Example -->
+             <div class="feature-box">
+                <div class="feature-box-title">🖥️ Code Example</div>
+            <div class="code-demo">
+                <div class="code-header">
+                    <span class="code-filename">PaymentDetails.java</span>
+                    <span class="code-language">Java / Spring Boot</span>
+                    <button class="code-toggle" onclick="toggleCode()">Hide Code</button>
+                </div>
+                <div class="code-body" id="code-body">
+<pre><code class="language-java">package com.softwears.Softwear.Payments;
+
+import com.softwears.Softwear.Users.Users;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "payment_details")
+public class PaymentDetails {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int paymentDetailsId;
+
+    @Column(name = "card_number")
+    private String cardNumber;
+
+    @Column(name = "card_name")
+    private String cardName;
+
+    @Column(name = "expiration_date")
+    private String expirationDate;
+
+    @Column(name = "cvv")
+    private double cvv;
+
+    @Column(name = "card_type")
+    private String cardType;
+
+    @Column(name = "card_function")
+    private String cardFunction;
+
+    @Column(name = "bank")
+    private String bank;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "customer_id")
+    private Users customerId;
+
+    public PaymentDetails() {}
+
+    public PaymentDetails(String cardNumber, String cardName, String expirationDate, double cvv, String cardType, String cardFunction, String bank, Users customerId) {
+        this.cardNumber = cardNumber;
+        this.cardName = cardName;
+        this.expirationDate = expirationDate;
+        this.cvv = cvv;
+        this.cardType = cardType;
+        this.cardFunction = cardFunction;
+        this.bank = bank;
+        this.customerId = customerId;
+
+    }
+
+    public void setPaymentDetailsId(int paymentDetailsId) {
+        this.paymentDetailsId = paymentDetailsId;
+    }
+
+    public int getPaymentDetailsId() {
+        return paymentDetailsId;
+    }
+
+    public String getCardNumber() {
+        return cardNumber;
+    }
+
+    public void setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
+    }
+
+    public String getCardName() {
+        return cardName;
+    }
+
+    public void setCardName(String cardName) {
+        this.cardName = cardName;
+    }
+
+    public String getExpirationDate() {
+        return expirationDate;
+    }
+
+    public void setExpirationDate(String expirationDate) {
+        this.expirationDate = expirationDate;
+    }
+
+    public double getCVV() {
+        return cvv;
+    }
+
+    public void setCVV(double cvv) {
+        this.cvv = cvv;
+    }
+
+    public String getCardType() {
+        return cardType;
+    }
+
+    public void setCardType(String cardType) {
+        this.cardType = cardType;
+    }
+
+    public String getCardFunction() {
+        return cardFunction;
+    }
+
+    public void setCardFunction(String cardFunction) {
+        this.cardFunction = cardFunction;
+    }
+
+    public String getBank() {
+        return bank;
+    }
+
+    public void setBank(String bank) {
+        this.bank = bank;
+    }
+
+    public Users getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(Users customerId) {
+        this.customerId = customerId;
+    }
+}</code></pre>
+                </div>
+</div>
+</div>
+            
+            <!-- Challenges & Solutions -->
+            <div class="feature-box">
+                <div class="feature-box-title">💡 Challenges & Solutions</div>
+                <div class="feature-box-content">
+                    <strong>Challenge:</strong> The group attempted using a local database within the project.<br><br>
+                    <strong>Solution:</strong> We used MySQL Workbench which we connected through AWS, this allowed for decoupled database management and easier collaboration. 
+                </div>
+            </div>
+
+            <div class="project-details">
+                <h3 class="details-title">Learning Outcomes</h3>
+                <ul class="details-list">
+                    <li>Gained experience with enterprise-level Spring Boot application development</li>
+                    <li>Learned to design and implement higher level MVC architecture</li>
+                    <li>Practiced agile development methodology with sprint planning</li>
+                    <li>Improved skills in database design and optimization</li>
+                    <li>Developed collaborative coding practices using Git and code reviews</li>
+                </ul>
+            </div>
+        </div>
+	
+
+    <!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+        <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close">×</button>
+        <img class="lightbox-image" id="lightbox-img" src="" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+    <div class="lightbox-hint">Click anywhere or press ESC to close</div>
+</div>
+
+<script src="assets/js/lightbox-modal.js"></script>
+</body>
+	
+</body>
+</html>

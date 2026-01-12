@@ -1,0 +1,87 @@
+.banner {
+	background-color:#94DCF8;
+	text-align: center;
+	padding: 20px;
+}
+
+.secondBanner {
+	background-color:#BCB7FF;
+	text-align: center;
+	padding: 10px;
+}
+.thirdBanner {
+	background-color:#E8E8E8;
+	text-align: left;
+	padding: 1px;
+}
+
+.navButton { 
+	text-decoration: none;
+	color: black;
+	font-size: 22px;
+	margin: 19px;
+	padding-left: 100px;
+	padding-right: 100px;
+	border: 2px;
+	border-radius: 5px;
+	border-style: solid;
+	border-color: black;
+	background-color: white;
+}
+
+.navButton:hover {
+	background-color: #bebebe;
+	color: black;
+}
+
+.navButton:active {
+	background-color: black;
+	color: white;
+}
+
+.paragraph {
+	color: black;
+	font-size: 18px;
+}
+
+.primaryList {
+	text-decoration-style: solid;
+	color: black;
+	font-size: 20px;
+}
+
+.secondaryList {
+	color: black;
+	font-size: 18px;
+}
+
+.imageDescriptors {
+	color: black;
+	font-size: 20px;
+}
+
+.contentBox {
+	width: 100%;
+}
+
+.listBox {
+	width: 50%;
+	float: left;
+}
+
+.innerBox {
+	width: 50%;
+	float: left;
+	margin-top: 145px;
+}
+
+.innerBox2 {
+	width: 50%;
+	float: right;
+}
+
+.infoText {
+	color: black;
+	font-size: 20px;
+	font-style: oblique;
+}

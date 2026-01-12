@@ -1,0 +1,459 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<div class="header-content">
+<title>Patrick's Website - 3D Models Page</title>
+</div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/fav.png" type="image/png">
+
+<!-- Bootstrap -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!-- code note test -->
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<script>
+function scrollModels(direction) {
+  const container = document.getElementById('modelScroll');
+  const scrollAmount = 440; // width of one model + gap
+  container.scrollLeft += direction * scrollAmount;
+}
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Wyndham - Computer Science Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  
+<div class="container">
+  <span class="floating-btn close"><a href="/static_html_output/index.html" class="view-details-btn">Home</a></span>
+  <span class="floating-btn top"><a href="#page-top" class="view-details-btn">Top</a></span>
+
+  
+<body>
+    <div class="grid-background"></div>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <!-- <span class="section-label">// 3D Art</span> -->
+                <h2 class="section-title">3D Models</h2>
+                <p class="section-description">A collection of 3D models created in Blender for game development</p>
+            </div>
+
+            <div class="models-grid">
+                <!-- Axe -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Axe</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/Axe.glb"
+                            alt="3D Axe"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                            <div slot="loading"></div>  <!-- Empty loading slot -->
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Weapon</span>
+                        <span class="model-tag">Game Asset</span>
+                    </div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Arrow</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/Arrow.glb"
+                            alt="3D Arrow"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Projectile</span>
+                        <span class="model-tag">Game Asset</span>
+                    </div>
+                </div>
+
+                <!-- Bow -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Bow</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/Bow.glb"
+                            alt="3D Bow"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Weapon</span>
+                        <span class="model-tag">Game Asset</span>
+                    </div>
+                </div>
+
+                <!-- Character Mage -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Character Mage</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/CharacterLowPoly.glb"
+                            alt="3D Character Mage"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Character</span>
+                        <span class="model-tag">Low Poly</span>
+                    </div>
+                </div>
+
+                <!-- Character Model -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Character Model</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/CharacterModel.glb"
+                            alt="3D Character Model"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Character</span>
+                        <span class="model-tag">Game Asset</span>
+                    </div>
+                </div>
+
+                <!-- Character Test -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Character Test</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/CharacterTest.glb"
+                            alt="3D Character Test"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Character</span>
+                        <span class="model-tag">Prototype</span>
+                    </div>
+                </div>
+
+                <!-- Chest -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Chest</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/ChestNew.glb"
+                            alt="3D Chest"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Environment</span>
+                        <span class="model-tag">Interactive</span>
+                    </div>
+                </div>
+
+                <!-- Dagger -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Dagger</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/Dagger.glb"
+                            alt="3D Dagger"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Weapon</span>
+                        <span class="model-tag">Game Asset</span>
+                    </div>
+                </div>
+
+                <!-- Elevator -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Elevator</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/ElevatorTest.glb"
+                            alt="3D Elevator"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Environment</span>
+                        <span class="model-tag">Mechanism</span>
+                    </div>
+                </div>
+
+                <!-- Enemy Model -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Enemy Model</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/EnemyModel.glb"
+                            alt="3D Enemy Model"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Character</span>
+                        <span class="model-tag">Enemy</span>
+                    </div>
+                </div>
+
+                <!-- Ghost -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Ghost</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/GhostTest.glb"
+                            alt="3D Ghost"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Character</span>
+                        <span class="model-tag">Enemy</span>
+                    </div>
+                </div>
+
+                <!-- Key -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Key</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/KeyTest.glb"
+                            alt="3D Key"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Item</span>
+                        <span class="model-tag">Collectible</span>
+                    </div>
+                </div>
+
+                <!-- Torch -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Torch</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/LightTest.glb"
+                            alt="3D Torch"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Environment</span>
+                        <span class="model-tag">Light Source</span>
+                    </div>
+                </div>
+
+                <!-- Projectile -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Projectile</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/Projectile.glb"
+                            alt="3D Projectile"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Magic</span>
+                        <span class="model-tag">VFX</span>
+                    </div>
+                </div>
+
+                <!-- Rat Trap -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Rat Trap</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/RatTrapTest.glb"
+                            alt="3D Rat Trap"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Trap</span>
+                        <span class="model-tag">Mechanism</span>
+                    </div>
+                </div>
+
+                <!-- Shopkeeper House -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Shopkeeper House</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/ShopkeeperHouse.glb"
+                            alt="3D Shopkeeper House"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Building</span>
+                        <span class="model-tag">Environment</span>
+                    </div>
+                </div>
+
+                <!-- Staff -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Staff</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/Staff.glb"
+                            alt="3D Staff"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Weapon</span>
+                        <span class="model-tag">Magic</span>
+                    </div>
+                </div>
+
+                <!-- Sword -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Sword</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/Sword.glb"
+                            alt="3D Sword"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Weapon</span>
+                        <span class="model-tag">Game Asset</span>
+                    </div>
+                </div>
+
+                <!-- Wand -->
+                <div class="model-card fade-in">
+                    <h3 class="model-title">Wand</h3>
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="/assets/models/Wand.glb"
+                            alt="3D Wand"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1">
+                        </model-viewer>
+                    </div>
+                    <div class="model-footer">
+                        <span class="model-tag">Weapon</span>
+                        <span class="model-tag">Magic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Load model-viewer -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
+
+	
+</body>
+</html>

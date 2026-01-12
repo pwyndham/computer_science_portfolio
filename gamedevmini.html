@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<div class="header-content">
+<title>Patrick's Website - Game Dev Mini Page</title>
+</div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/fav.png" type="image/png">
+
+<!-- Bootstrap -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!-- code note test -->
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Wyndham - Computer Science Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  
+<div class="container">
+  <span class="floating-btn close"><a href="/static_html_output/index.html" class="view-details-btn">Home</a></span>
+  <span class="floating-btn top"><a href="#page-top" class="view-details-btn">Top</a></span>
+
+
+
+    <!-- Title Section -->
+
+<br>
+                <div class="modal-header">
+                <h2 class="modal-title">Brogue Like Mini Project</h2>
+                <p class="modal-subtitle">A mini roguelike game built in Java using Unity</p>
+                <div class="modal-tags">
+                  <span class="modal-tag">Unity</span>
+                    <span class="modal-tag">C#</span>
+                    <span class="modal-tag">Blender</span>
+                    <span class="modal-tag">VSCode</span>
+                    <span class="project-link"><p>Github Link: <a href="https://github.com/pwyndham/Game-Dev-Brogue-Like" target="_blank"><u>https://github.com/pwyndham/Game-Dev-Brogue-Like</u></a></p></span>
+                  
+                  </div>
+                </div>
+       
+
+   <!-- Project Overview -->
+
+            <div class="project-details">
+                <h3 class="details-title">Project Overview</h3>
+                <p class="details-text">Brogue Like was a mini project I had in my Game Development class. I was tasked with creating an isometric view rogue-like game.
+            We were tasked with creating some models in Blender, and another focus on this project was triggers. Triggers including win and loss conditions,
+            as well as unlocking the door and being able to go in the elevator.</p>
+
+            </div>
+
+            <!-- Demo -->
+<div class="project-details">
+    <h3 class="details-title">Game Demo</h3>
+    <div class="demo-video-container">
+        <video controls>
+            <source src="assets\videos\2025-03-07 21-32-34.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <p class="details-text" style="margin-top: 1rem; text-align: center; font-style: italic;">
+        Watch gameplay footage showcasing character classes, combat mechanics, and dungeon exploration
+    </p>
+</div>
+
+<!-- Screenshot Gallery -->
+  <div class="screenshot-gallery">
+  <h3 class="gallery-title">Screenshots</h3>
+                <div class="gallery-grid">
+    <div class="screenshot-item" onclick="openLightbox(this)">
+      <div class="screenshot-image"><img src="assets/images/extra-images/Brogue like start.jpg" alt="Brogue Like Start"></div>
+      <div class="screenshot-caption">Brogue Like Start</div>
+    </div>
+
+    <div class="screenshot-item" onclick="openLightbox(this)">
+        <div class="screenshot-image"><img src="assets/images/extra-images/Brogue like unlock.jpg" alt="Brogue Like Unlock"></div>
+        <div class="screenshot-caption">Brogue Like Unlock</div>
+    </div>
+
+    </div>
+  </div>
+
+
+
+    
+    
+  
+
+
+
+<!-- Key Features -->
+            <div class="project-details">
+                <h3 class="details-title">Key Features</h3>
+                <ul class="details-list">
+                    <li>Isometric camera perspective for roguelike gameplay</li>
+                    <li>Trigger-based game mechanics system</li>
+                    <li>Win and loss condition detection and handling</li>
+                    <li>Door unlocking mechanism triggered by player interaction</li>
+                    <li>Elevator activation system for level progression</li>
+                    <li>Custom 3D models created in Blender</li>
+                    <li>Player movement and collision detection in isometric space</li>
+                    <li>Event-driven gameplay using Unity's trigger system</li>
+                </ul>
+            </div>
+
+            <!-- Technical Implementation -->
+            <div class="feature-box">
+                <div class="feature-box-title">🏗️ Technical Architecture</div>
+                <div class="feature-box-content">
+                     The game is built in Unity Engine with C# scripting, focusing on Unity's trigger and collision 
+                    systems. The isometric camera view was configured to provide the classic roguelike perspective. 
+                    3D assets including environmental pieces were created in Blender and imported into Unity. The 
+                    core game logic revolves around Unity's trigger system (OnTriggerEnter/OnTriggerExit) to detect 
+                    player interactions with doors, elevators, and objective items. Event-driven architecture handles 
+                    win/loss conditions when specific triggers are activated. VSCode was used as the IDE for all C# 
+                    script development. This mini-project served as an exercise in understanding Unity's physics system 
+                    and event-based programming patterns.
+                </div>
+            </div>
+
+            <!-- Code Example -->
+             <div class="feature-box">
+                <div class="feature-box-title">💻 Code example</div>
+            <div class="code-demo">
+                <div class="code-header">
+                    <span class="code-filename">Player.cs</span>
+                    <span class="code-language">C# / Unity</span><button class="code-toggle" onclick="toggleCode()">Hide Code</button>
+                </div>
+                <div class="code-body" id="code-body">
+<pre><code class="language-csharp">using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class Player : MonoBehaviour
+{
+    public GameObject leftDoor;
+    public GameObject rightDoor;
+    CharacterController characterController;
+    public PlayerInventory playerInventory;
+
+    Vector3 resetTransform;
+
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip hitWallSFX;
+    
+
+    void Awake()
+    {
+        characterController = GetComponent<CharacterController>();
+        
+         if (playerInventory == null) {
+
+         playerInventory = GetComponent<PlayerInventory>();
+         }
+    }
+   
+
+    public void moveWithCharacterController(Vector3 direction) {
+        GetComponent<CharacterController>().Move(direction);
+        resetTransform = transform.position;
+    }
+
+    public void moveBackAfterCollision(Vector3 direction) {
+        
+        characterController.enabled = false;
+        transform.position = resetTransform;
+        characterController.enabled = true;
+        Debug.Log("Moving back");
+    }
+    
+    public void bounceOffWall(Vector3 resetTransform) {
+        
+        audioSource.resource = hitWallSFX;
+        audioSource.Play();
+        moveBackAfterCollision(resetTransform);
+        Debug.Log(resetTransform);
+        
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit) {
+        HitWallCollider(hit);
+        HitElevatorFloorCollider(hit);
+        HitDoorCollider(hit);
+    }
+
+    private void HitDoorCollider(ControllerColliderHit hit)
+    {
+         if (hit.gameObject.CompareTag("Door")) {
+            
+            bool hasKey = playerInventory.checkForKey();
+
+            if (hasKey) {
+                OpenDoors();
+            } else {
+            bounceOffWall(resetTransform);
+            Debug.Log("You don't have a key!");
+            }
+        }
+    }
+
+    private void OpenDoors()
+    {   
+        leftDoor.transform.position = new Vector3(-4.04f,0.829f,-.8145f);
+        rightDoor.transform.position = new Vector3(-4.04f,0.829f,.95f);
+   
+    }
+
+    public void HitWallCollider(ControllerColliderHit hit) {
+        if (hit.gameObject.CompareTag("Wall")) {
+            
+            bounceOffWall(resetTransform);
+            Debug.Log("Bounce off wall");
+        }
+    }
+
+    public void HitElevatorFloorCollider(ControllerColliderHit hit) {
+        if (hit.gameObject.CompareTag("Elevator")) {
+            Debug.Log("you win");
+            SceneManager.LoadScene("Win Screen");
+            
+        }
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        HitTrapTrigger(other);
+        HitKeyTrigger(other);
+    }
+    public void HitKeyTrigger(Collider other) {
+        if (other.gameObject.CompareTag("Key")) {
+            
+            GameObject key = other.gameObject;
+            if (playerInventory != null) {
+                playerInventory.addToInventory(key);
+
+           
+            key.transform.SetParent(transform);
+            key.transform.localPosition = new Vector3(0f, .65f, 3.68f); 
+            Debug.Log("Key local position: " + key.transform.localPosition);
+            Debug.Log("You picked up a key");
+
+            } else {
+                Debug.Log("Playerinventory is null");
+            }
+        }
+    }
+
+    public void HitTrapTrigger(Collider other) {
+        if (other.gameObject.CompareTag("Trap")) {
+            Debug.Log("You stepped on trap...");
+            SceneManager.LoadScene("Lose Screen");
+
+        }
+    }
+}</code></pre>
+                </div>
+            </div>
+</div>
+            
+            <!-- Challenges & Solutions -->
+            <div class="feature-box">
+                <div class="feature-box-title">💡 Challenges & Solutions</div>
+                <div class="feature-box-content">
+                    <strong>Challenge:</strong> Implementing reliable trigger detection in an isometric view where player movement and collision boxes needed precise configuration.<br><br>
+                    <strong>Solution:</strong> Carefully configured collider sizes and trigger zones to ensure consistent detection. Used Unity's 
+                    layer system to filter which objects should trigger interactions. Tested extensively with different approach angles 
+                    to ensure triggers activated reliably from all directions in the isometric space.<br><br>
+                </div>
+            </div>
+
+            <div class="project-details">
+                <h3 class="details-title">Learning Outcomes</h3>
+                <ul class="details-list">
+                    <li>Gained practical experience with Unity's trigger and collision detection systems</li>
+                    <li>Learned to implement isometric camera perspectives for game development</li>
+                    <li>Developed understanding of event-driven programming patterns in game design</li>
+                    <li>Practiced 3D modeling in Blender for game asset creation</li>
+                    <li>Improved skills in designing game state systems and condition-based logic</li>
+                    <li>Enhanced C# programming abilities specific to Unity's MonoBehaviour lifecycle</li>
+                    <li>Learned to use OnTriggerEnter and OnTriggerExit for interaction detection</li>
+                    <li>Understood the importance of careful collider configuration for reliable gameplay</li>
+                    <li>Gained experience implementing sequential trigger activation systems</li>
+                    <li>Developed debugging skills for physics and trigger-based interactions</li>
+                </ul>
+            </div>
+        </div>
+	
+</div>
+    <!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+        <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close">×</button>
+        <img class="lightbox-image" id="lightbox-img" src="" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+    <div class="lightbox-hint">Click anywhere or press ESC to close</div>
+</div>
+
+<script src="assets/js/lightbox-modal.js"></script>
+</body>
+	
+
+	
+</body>
+</html>
