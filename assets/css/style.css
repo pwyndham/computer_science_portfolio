@@ -531,7 +531,7 @@
             to { opacity: 1; }
         }
         
-        .floating-btn {
+        /* .floating-btn {
             position: fixed;
             left: 2rem;
 
@@ -550,6 +550,12 @@
             justify-content: center;
 
             transition: all 0.3s ease;
+            z-index: 1000;
+        } */
+        
+        .floating-btn {
+            position: fixed;
+            left: 2rem;
             z-index: 1000;
         }
         
@@ -927,46 +933,52 @@
 
         /* Navigation Styles */
         .nav {
-    position: fixed;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    
-    /* Frosted glass effect */
-    background: rgba(18, 24, 32, 0.8);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--accent-primary);
-    border-radius: 16px;
-    padding: 1.5rem 1rem;
-    box-shadow: 0 8px 32px var(--shadow), 
-                0 0 20px rgba(0, 255, 136, 0.1);
-}
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+            /* Frosted glass effect */
+            background: rgba(18, 24, 32, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--accent-primary);
+            border-radius: 16px;
+            padding: 1.5rem 1rem;
+            box-shadow: 0 8px 32px var(--shadow), 
+                        0 0 20px rgba(0, 255, 136, 0.1);
+        }
 
-        /* Responsive Design */
+       /* FIXED: Responsive Design for Mobile */
         @media (max-width: 768px) {
+            /* Move nav to top on mobile to avoid blocking content */
             .nav {
                 position: fixed;
-                bottom: 20px;
+                top: 20px;
                 left: 50%;
                 transform: translateX(-50%);
-                top: auto;
+                bottom: auto;
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
                 max-width: 90vw;
-                background: rgba(10, 10, 10, 0.95);
-                padding: 15px;
+                background: rgba(18, 24, 32, 0.95);
+                padding: 10px;
                 border-radius: 12px;
-                border: 1px solid rgba(59, 130, 246, 0.3);
+                gap: 5px;
+            }
+            
+            .nav-btn a {
+                font-size: 0.75rem;
+                padding: 0.5rem 0.75rem;
             }
 
             .view-details-btn {
-                font-size: 12px;
-                padding: 8px 12px;
+                font-size: 0.75rem;
+                padding: 0.5rem 0.75rem;
             }
 
             .section {
@@ -975,6 +987,20 @@
 
             .projects-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            /* Adjust floating buttons for mobile */
+            .floating-btn {
+                left: 1rem;
+            }
+            
+            .floating-btn.top {
+                bottom: 1rem;
+            }
+            
+            .floating-btn.close {
+                top: auto;
+                bottom: 5rem;
             }
         }
 
