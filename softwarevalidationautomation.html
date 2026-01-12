@@ -11,7 +11,7 @@
 
 <!-- Favicons
     ================================================== -->
-<link rel="shortcut icon" href="img/fav.png" type="image/png">
+<link rel="shortcut icon" href="img/fav.PNG" type="image/PNG">
 
 <!-- Bootstrap -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,32 +86,32 @@
     </div>
 
     <div class="screenshot-item" onclick="openLightbox(this)">
-        <div class="screenshot-image"><img src="assets/images/extra-images/software val 2/MainActivityScreenshot.png" alt="Main Activity"></div>
+        <div class="screenshot-image"><img src="assets/images/extra-images/software val 2/MainActivityScreenshot.PNG" alt="Main Activity"></div>
         <div class="screenshot-caption">Main Activity</div>
     </div>
 
     <div class="screenshot-item" onclick="openLightbox(this)">
-      <div class="screenshot-image"><img src="assets/images/extra-images/software val 2/SettingsScreenshot.png" alt="Settings Screenshot"></div>
+      <div class="screenshot-image"><img src="assets/images/extra-images/software val 2/SettingsScreenshot.PNG" alt="Settings Screenshot"></div>
       <div class="screenshot-caption">Settings Screenshot</div>
     </div>
 
     <div class="screenshot-item" onclick="openLightbox(this)">
-        <div class="screenshot-image"><img src="assets/images/extra-images/software val 2/ManageEventTypesActivityScreenshot.png" alt="Manage Event Types"></div>
+        <div class="screenshot-image"><img src="assets/images/extra-images/software val 2/ManageEventTypesActivityScreenshot.PNG" alt="Manage Event Types"></div>
         <div class="screenshot-caption">Manage Event Types</div>
     </div>
 
     <div class="screenshot-item" onclick="openLightbox(this)">
-        <div class="screenshot-image"><img src="assets/images/extra-images/software val 2/EventActivityScreenshot.png" alt="Event Activity"></div>
+        <div class="screenshot-image"><img src="assets/images/extra-images/software val 2/EventActivityScreenshot.PNG" alt="Event Activity"></div>
         <div class="screenshot-caption">Event Activity</div>
     </div>
 
     <div class="screenshot-item" onclick="openLightbox(this)">
-        <div class="screenshot-image"><img src="assets/images/extra-images/software val 2/SelectTimeZoneActivityScreenshot.png" alt="Select Time Zone Activity"></div>
+        <div class="screenshot-image"><img src="assets/images/extra-images/software val 2/SelectTimeZoneActivityScreenshot.PNG" alt="Select Time Zone Activity"></div>
         <div class="screenshot-caption">Select Time Zone Activity</div>
     </div>
 
      <div class="screenshot-item" onclick="openLightbox(this)">
-        <div class="screenshot-image"><img src="assets/images/extra-images/software val 2/TaskActivityScreenshot.png" alt="Task Activity"></div>
+        <div class="screenshot-image"><img src="assets/images/extra-images/software val 2/TaskActivityScreenshot.PNG" alt="Task Activity"></div>
         <div class="screenshot-caption">Task Activity</div>
     </div>
     </div>
@@ -189,7 +189,7 @@ wait = WebDriverWait(driver, 30)
 # screenshot
 def screenshot(name):
     os.makedirs("Screenshots", exist_ok=True)
-    filename = f"Screenshots/{name}.png"
+    filename = f"Screenshots/{name}.PNG"
     driver.save_screenshot(filename)
     print(f"Saved: {filename}")
 
