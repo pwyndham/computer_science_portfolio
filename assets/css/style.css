@@ -850,14 +850,18 @@
         .code-toggle:hover {
             background: #45a049;
         }
+        /* Code body collapsed by default */
         .code-body {
-            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-            overflow: hidden;
-        }
-        .code-body.hidden {
-            max-height: 0 !important;
+            max-height: 0;
             opacity: 0;
             padding: 0 !important;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
+            overflow: hidden;
+        }
+        .code-body.expanded {
+            max-height: 2000px;
+            opacity: 1;
+            padding: 1.5rem !important;
         }
      
 

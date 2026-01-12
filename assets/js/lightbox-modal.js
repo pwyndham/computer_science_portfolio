@@ -29,12 +29,12 @@ function openLightbox(element) {
     const codeBody = document.getElementById('code-body');
     const toggleBtn = document.querySelector('.code-toggle');
     
-    if (codeBody.classList.contains('hidden')) {
-        codeBody.classList.remove('hidden');
-        toggleBtn.textContent = 'Hide Code';
-    } else {
-        codeBody.classList.add('hidden');
+    if (codeBody.classList.contains('expanded')) {
+        codeBody.classList.remove('expanded');
         toggleBtn.textContent = 'Show Code';
+    } else {
+        codeBody.classList.add('expanded');
+        toggleBtn.textContent = 'Hide Code';
     }
 }
 
