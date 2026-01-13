@@ -975,7 +975,10 @@
         }
 
         .nav-btn a:hover {
-            color: var(--accent-primary);
+            border-color: var(--accent-primary);
+            background: var(--bg-tertiary);
+            color: var(--accent-tertiary);
+            
         }
 
         /* Mobile responsive navigation */
