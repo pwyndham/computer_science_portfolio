@@ -1346,6 +1346,7 @@
         }
 
 
+        /* Social Links Styling */
         .social-links-container {
             margin-top: 3rem;
             display: flex;
@@ -1366,6 +1367,7 @@
             display: flex;
             align-items: center;
             gap: 1rem;
+            text-decoration: none;
         }
 
         .social-link-card::before {
