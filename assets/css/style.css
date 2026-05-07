@@ -1462,3 +1462,33 @@
                 min-width: 100%;
             }
         }
+
+        .experience-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.job-info {
+    flex: 1;
+}
+
+.job-dates {
+    flex-shrink: 0;
+    text-align: right;
+    font-size: 0.9em;
+    color: #888;
+    margin-left: 20px;
+}
+
+.experience-item h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+}
+
+.company {
+    margin: 0 0 10px 0;
+    color: #00ff88; /* or your accent color */
+    font-weight: 600;
+}
